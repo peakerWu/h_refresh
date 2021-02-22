@@ -624,50 +624,50 @@ class ClassicalFooterWidgetState extends State<ClassicalFooterWidget>
   List<Widget> _buildContent(bool isVertical, bool isReverse) {
     return isVertical
         ? <Widget>[
+            // Expanded(
+            //   flex: 2,
+            //   child: Container(
+            //     alignment: Alignment.centerRight,
+            //     padding: EdgeInsets.only(
+            //       right: 10.0,
+            //     ),
+            //     child: (widget.loadState == LoadMode.load ||
+            //                 widget.loadState == LoadMode.armed) &&
+            //             !widget.noMore
+            //         ? Container(
+            //             width: 20.0,
+            //             height: 20.0,
+            //             child: CircularProgressIndicator(
+            //               strokeWidth: 2.0,
+            //               valueColor: AlwaysStoppedAnimation(
+            //                 widget.classicalFooter.textColor,
+            //               ),
+            //             ),
+            //           )
+            //         : widget.loadState == LoadMode.loaded ||
+            //                 widget.loadState == LoadMode.done ||
+            //                 (widget.enableInfiniteLoad &&
+            //                     widget.loadState != LoadMode.loaded) ||
+            //                 widget.noMore
+            //             ? widget.noMore
+            //                 ? SizedBox.shrink()
+            //                 : Icon(
+            //                     _finishedIcon,
+            //                     color: widget.classicalFooter.textColor,
+            //                   )
+            //             : Transform.rotate(
+            //                 child: Icon(
+            //                   !isReverse
+            //                       ? Icons.arrow_upward
+            //                       : Icons.arrow_downward,
+            //                   color: widget.classicalFooter.textColor,
+            //                 ),
+            //                 angle: 2 * pi * _iconRotationValue,
+            //               ),
+            //   ),
+            // ),
             Expanded(
-              flex: 2,
-              child: Container(
-                alignment: Alignment.centerRight,
-                padding: EdgeInsets.only(
-                  right: 10.0,
-                ),
-                child: (widget.loadState == LoadMode.load ||
-                            widget.loadState == LoadMode.armed) &&
-                        !widget.noMore
-                    ? Container(
-                        width: 20.0,
-                        height: 20.0,
-                        child: CircularProgressIndicator(
-                          strokeWidth: 2.0,
-                          valueColor: AlwaysStoppedAnimation(
-                            widget.classicalFooter.textColor,
-                          ),
-                        ),
-                      )
-                    : widget.loadState == LoadMode.loaded ||
-                            widget.loadState == LoadMode.done ||
-                            (widget.enableInfiniteLoad &&
-                                widget.loadState != LoadMode.loaded) ||
-                            widget.noMore
-                        ? widget.noMore
-                            ? SizedBox.shrink()
-                            : Icon(
-                                _finishedIcon,
-                                color: widget.classicalFooter.textColor,
-                              )
-                        : Transform.rotate(
-                            child: Icon(
-                              !isReverse
-                                  ? Icons.arrow_upward
-                                  : Icons.arrow_downward,
-                              color: widget.classicalFooter.textColor,
-                            ),
-                            angle: 2 * pi * _iconRotationValue,
-                          ),
-              ),
-            ),
-            Expanded(
-              flex: 3,
+              // flex: 3,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -696,10 +696,10 @@ class ClassicalFooterWidgetState extends State<ClassicalFooterWidget>
                 ],
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: SizedBox(),
-            ),
+            // Expanded(
+            //   flex: 2,
+            //   child: SizedBox(),
+            // ),
           ]
         : <Widget>[
             Container(
