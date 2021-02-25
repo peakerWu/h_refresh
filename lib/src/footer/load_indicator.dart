@@ -178,7 +178,10 @@ class _RenderEasyRefreshSliverLoad extends RenderSliverSingleBoxAdapter {
     if (constraints.precedingScrollExtent <
         constraints.viewportMainAxisExtent) {
       extraExtent = constraints.viewportMainAxisExtent -
-          constraints.precedingScrollExtent - 60;
+          constraints.precedingScrollExtent;
+      if (extraExtent > _loadIndicatorExtent) {
+        extraExtent = extraExtent - _loadIndicatorExtent;
+      }
     }
     extraExtentNotifier.value = extraExtent;
 
