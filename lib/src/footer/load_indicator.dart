@@ -183,8 +183,7 @@ class _RenderEasyRefreshSliverLoad extends RenderSliverSingleBoxAdapter {
         extraExtent = extraExtent - _loadIndicatorExtent;
       }
     }
-    // extraExtentNotifier.value = extraExtent;
-    extraExtentNotifier.value = max(_loadIndicatorExtent, extraExtent);
+    extraExtentNotifier.value = extraExtent;
 
     // Only pulling to refresh from the top is currently supported.
     // 注释以支持reverse
